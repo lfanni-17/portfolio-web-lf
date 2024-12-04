@@ -1,0 +1,290 @@
+/*A reszponzivitásért felelős parancsok AI segítségével lettek elkészítve*/
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #D41313;
+  background-color:#f5f5f5;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 2rem; 
+  background-color: #f5f5f5;
+}
+
+.portfolio-left h1 {
+  font-size: 64px;
+  color: #D41313;
+  margin-bottom: 1rem;
+}
+
+.portfolio-left {
+  width: 45%;
+  text-align: left;
+}
+
+.portfolio-left p {
+  font-size: 26px;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0; 
+}
+
+.portfolio-right {
+  width: 45%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.portfolio-right img {
+  width: 100%;
+  max-width: 80%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  margin: 0;
+}
+
+/* Nimbus Projekt szekció */
+.nimbus-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+}
+
+.nimbus-left {
+  width: 45%;
+  text-align: left;
+}
+
+.nimbus-left h2 {
+  font-size: 64px;
+  color: #D41313;
+  margin-bottom: 1rem;
+}
+
+.nimbus-left .year {
+  font-size: 48px;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.nimbus-left .description {
+  font-size: 32px;
+  color: #D41313;
+  line-height: 1.6;
+}
+
+.nimbus-right {
+  width: 45%;
+}
+
+.nimbus-right img {
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  margin-bottom: 10%;
+}
+
+/* Blender Projekt szekció */
+.Blender {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.Blender-left {
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem; 
+}
+
+.Blender-left h2 {
+  font-size: 64px;
+  color: #D41313;
+  margin-bottom: 0.5rem;
+}
+
+.Blender-left .year {
+  font-size: 48px;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.Blender-left .description {
+  font-size: 32px;
+  color: #D41313;
+  line-height: 1.6;
+}
+
+.Blender-right {
+  flex: 0 0 auto; 
+  text-align: center;
+}
+
+.Blender-right img {
+  width: 600px; 
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+
+/* Costa szekció */
+.costa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+}
+
+.costa-left {
+  width: 45%;
+  text-align: left;
+}
+
+.costa-left h2 {
+  font-size: 64px;
+  color: #D41313;
+  margin-bottom: 1rem;
+}
+
+.costa-left .year {
+  font-size: 48px;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.costa-left .description {
+  font-size: 32px;
+  color: #D41313;
+  line-height: 1.6;
+}
+
+.costa-right {
+  width: 45%;
+}
+
+.costa-right img {
+  width: 70%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  height: auto;
+  margin-left: 30%;
+}
+
+/* Kapcsolat szekció */
+.contact {
+  width: 100%;
+  background-color: #D41313;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.contact h2 {
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.contact a {
+  display: inline-block;
+  text-decoration: none;
+  color: #D41313;
+  background-color: #f5f5f5;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact a:hover {
+  background-color: #f5f5f5;
+  color: #D41313;
+}
+
+/* Footer */
+footer {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Reszponzív megjelenés, AI segítségével */
+@media (max-width: 768px) {
+  .hero-left {
+    width: 90%;
+  }
+
+  .nimbus-project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nimbus-left,
+  .nimbus-right {
+    width: 100%;
+  }
+
+  .nimbus-left h2,
+  .nimbus-left .year {
+    font-size: 36px;
+  }
+
+  .nimbus-left .description {
+    font-size: 32px;
+  }
+
+  .Blender {
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+  .Blender-right {
+    margin-top: 10%; 
+  }
+
+  .Blender-right img {
+    width: 50%;
+  } 
+}
+
+/*AI segítségével*/
+.portfolio-right img:hover,
+.nimbus-right img:hover,
+.Blender-right img:hover,
+.costa-right img:hover {
+  filter: grayscale(0); 
+  transform: scale(1.05); 
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
